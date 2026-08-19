@@ -1,58 +1,74 @@
-## Trust Agent - Validation Evidence
+# Trust Agent Validation Evidence
 
-## Contents
+Trust Agent is a runtime verification layer for AI agent outputs.
 
-- [What it is](./README.md)
-- [Capability Overview](./Capability_Overview.md)
-- [Validation Report](./Agentjacking_Validation_Report.md)
-- [Known Limitations](./Known_Limitations_Public.md)
-- [License](./LICENSE.md)
+It sits between an agent's proposed action and execution. Before a consequential action runs, it independently evaluates one question: is this action authorized, aligned, and safe to execute?
+
+The separation this enforces:
+
+```
+agent intelligence ≠ execution authority
+```
+
+An agent can be competent and still propose something the user did not authorize. Trust Agent evaluates the proposed action independently before execution authority is granted.
+
+---
+
+## How it works
+
+```
+Agent proposes action → independent verification → ALLOW / REVIEW / BLOCK → execution only when conditions are satisfied
+```
+
+---
+
+## Current validation
+
+Current Validation v1 is complete. Fresh unseen adversarial cases: 10/10 FLAG, 0 PASS, 8/10 matched expected. Benign controls: 8/10 PASS, 2 REFINE, 0 FLAG, two legitimate low-context reads were held for review.
 
 
-![Status: Validated](https://img.shields.io/badge/status-validated-success)
-![Date: June 2026](https://img.shields.io/badge/date-June%202026-blue)
-![Attack Class: Agentjacking](https://img.shields.io/badge/attack%20class-Agentjacking-orange)
-![License: All Rights Reserved](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
+Full results and methodology are in [benchmarks/current-validation-v1/](benchmarks/current-validation-v1/) and [reports/current-validation-report.md](reports/current-validation-report.md).
 
+---
 
-Trust Agent is a runtime verification layer for AI agent outputs,
-built around one principle: An action is only trustworthy if it
-traces back to what the user actually asked for, instead of something a
-tool or document handed the agent along the way.
+## Operational behavior
 
-This repository contains validation evidence and a behavioral
-description of the system. It does not contain the engine, scoring
-logic, or calibration data as those are proprietary. What's published
-here is proof the system works and a clear account of where it
-currently doesn't, not how it's built.
+| Scenario | Outcome | Operational meaning |
+|---|---|---|
+| Compromised agent proposes destructive action | FLAG or BLOCK | Execution does not proceed in evaluated and mediated scope |
+| Legitimate file operation sufficiently verified | ALLOW | Normal work proceeds without unnecessary blocking |
+| Authorization scope is ambiguous | REVIEW | Agent cannot silently continue; human review required |
+| Opaque write content (current limitation) | May pass | Limitation documented; see KNOWN_LIMITATIONS.md |
 
-## Contents
+---
 
-Capability_Overview.md: What the system does, what it catches, and
-what it does not claim. Behavioral description only.
+## Repository contents
 
-Agentjacking_Validation_Report.md: A real-model test against Tenet
-Security's disclosed "Agentjacking" attack class (June 2026), including
-a deliberately harder adversarial variant and working negative
-controls. Full results, methodology, and an honestly reported open
-question.
+| Path | Contents |
+|---|---|
+| `incidents/` | Test suites derived from real-world disclosed security research |
+| `evaluations/` | General adversarial and benign capability tests |
+| `benchmarks/` | Frozen headline validation releases |
+| `enforcement/` | Evidence that decisions actually gate execution |
+| `reports/` | Human-readable interpretation of validation results |
 
-Known_Limitations_Public.md: A plain-language account of where the
-system currently declines to auto-confirm rather than guess, and why
-that's the correct failure mode for a verification layer.
+---
+
+## What is not in this repository
+
+The Trust Agent engine, scoring logic, internal prompts, and calibration data are proprietary. This repository contains validation evidence and a behavioral description only, evidence of observed behavior and an honest account of where it currently does not perform as expected.
+
+---
 
 ## Status
 
-Independently built and tested by one person. Validated on a real
-local NLI model and a real LLM, it's not a simulation. 
-Not yet production-scale or independently audited.
+Built and tested by one person. Not yet independently audited. Validation is ongoing.
+
+[![License: All Rights Reserved](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)](LICENSE.md)
+
+---
 
 ## Contact
 
-Open to demonstration, evaluation, or collaboration discussions. The
-engine is not open source; access beyond what's published here is
-considered case by case.
-email - swapnilpanchal0215@gmail.com
-
-
-
+Open to demonstration, evaluation, or collaboration.
+Email: swapnilpanchal0215@gmail.com
