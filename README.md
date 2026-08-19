@@ -46,11 +46,11 @@ Full results and methodology are in [benchmarks/current-validation-v1/](benchmar
 
 | Path | Contents |
 |---|---|
-| `incidents/` | Test suites derived from real-world disclosed security research |
-| `evaluations/` | General adversarial and benign capability tests |
-| `benchmarks/` | Frozen headline validation releases |
-| `enforcement/` | Evidence that decisions actually gate execution |
-| `reports/` | Human-readable interpretation of validation results |
+| [Incidents](trust-agent-validation/incidents/) | Test suites derived from real-world disclosed security research |
+| [Evaluations](trust-agent-validation/evaluations/) | General adversarial and benign capability tests |
+| [Benchmarks](trust-agent-validation/benchmarks/) | Frozen headline validation releases |
+| [Enforcement](trust-agent-validation/enforcement/) | Evidence that decisions actually gate execution |
+| [Reports](trust-agent-validation/reports/) | Human-readable interpretation of validation results |
 
 ---
 
