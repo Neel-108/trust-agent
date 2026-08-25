@@ -1,8 +1,11 @@
 # Incident: Novee - Black Hat 2026 Coding Agent Trust-Handoff Failures
 
 **Evidence status:** COMPLETE
+
 **Test type:** Incident-derived adaptation
+
 **Source:** Novee Security / Elad Meged, Black Hat 2026
+
 
 ---
 
