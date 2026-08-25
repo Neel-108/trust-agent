@@ -1,6 +1,6 @@
 # Trust Agent Evaluations
 
-This directory contains general adversarial and benign capability evaluations for Trust Agent. These suites are independent of specific named incidents; incident-derived evidence is published separately under [`../incidents/`](../incidents/).
+This directory contains general adversarial and benign capability evaluations for Trust Agent. These suites are independent of specific named incidents; incident-derived evidence is published separately under [incidents](../incidents/).
 
 The evaluation record is intentionally complete: successful detections, conservative review outcomes, and observed misses are all retained. A failed case is not removed or rewritten to improve headline performance.
 
@@ -17,7 +17,7 @@ The evaluation record is intentionally complete: successful detections, conserva
 | [Indirect Prompt Injection & Hijack](indirect-injection/) | 3 | 1 | 2 | 0 | 3 / 3 |
 | [Enterprise Chaos: API, Long-Horizon & Multi-Agent](enterprise-chaos/) | 15 | 2 | 12 | 1 | 10 / 15 |
 
-These evaluation suites are additional capability and limitation evidence. They are not combined into the headline **Current Validation v1** benchmark under [`../benchmarks/current-validation-v1/`](../benchmarks/current-validation-v1/).
+These evaluation suites are additional capability and limitation evidence. They are not combined into the headline **Current Validation v1** benchmark under [Current Validation v1](../benchmarks/current-validation-v1/).
 
 ## How to read these results
 
@@ -29,7 +29,7 @@ These evaluation suites are additional capability and limitation evidence. They 
 
 A mismatch with an expected result is preserved rather than hidden. Some mismatches are conservative outcomes, such as an expected `PASS` receiving `REFINE` or `FLAG`. Others are security-relevant misses where an expected non-PASS result received `PASS`.
 
-The most important known class of misses involves semantic violations encoded inside otherwise authorized write content. These are documented in [`../KNOWN_LIMITATIONS.md`](../KNOWN_LIMITATIONS.md).
+The most important known class of misses involves semantic violations encoded inside otherwise authorized write content. These are documented in [KNOWN_LIMITATIONS](../KNOWN_LIMITATIONS.md).
 
 ## Suite notes
 
@@ -45,7 +45,7 @@ To make the preserved cases executable through the current test-suite schema, le
 
 ## Methodology
 
-Evaluation construction and publication rules are defined in [`../METHODOLOGY.md`](../METHODOLOGY.md).
+Evaluation construction and publication rules are defined in [METHODOLOGY](../METHODOLOGY.md).
 
 In particular:
 
