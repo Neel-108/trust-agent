@@ -110,7 +110,7 @@ The repository distinguishes these from current benchmark and evaluation evidenc
 
 ## Enforcement validation
 
-Evidence that Trust Agent decisions gate execution is published under [[Enforcement](enforcement/). This covers:
+Evidence that Trust Agent decisions gate execution is published under [Enforcement](enforcement/). This covers:
 
 - Execution-permit primitive proof: 6 / 6
 - Integrated local end-to-end enforcement proof: 2 / 2
