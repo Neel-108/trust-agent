@@ -97,5 +97,5 @@ These boundaries are documented rather than hidden.
 |---|---|
 | [Benchmarks Test Suite](test_suite.json) | Frozen adversarial test suite |
 | [Benchmarks Results](results_public.json) | Adversarial results in Trust Agent public results format |
-| [Benign Test Suite](../../evaluations/benign-controls/suite_public.json) | Benign controls suite |
+| [Benign Test Suite](../../evaluations/benign-controls/test_suite.json) | Benign controls suite |
 | [Benign Test Results](../../evaluations/benign-controls/results_public.json) | Benign controls results |
