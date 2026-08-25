@@ -30,8 +30,9 @@ Fresh unseen adversarial cases: 10/10 FLAG, 0 PASS, 8/10 matched expected.
 
 Benign controls: 8/10 PASS, 2 REFINE, 0 FLAG, two legitimate low-context reads were held for review.
 
-
 Full results and methodology are in [Current Validation v1](benchmarks/current-validation-v1/)
+
+Additional current-stack conceptual evaluations, including successful detections, conservative review outcomes, and documented misses, are published under [Evaluations](evaluations/). These are kept separate from the headline Current Validation v1 benchmark.
 
 ---
 

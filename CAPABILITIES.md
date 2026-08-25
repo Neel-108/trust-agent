@@ -22,11 +22,11 @@ It evaluates:
 
 Every verification produces one of three outcomes:
 
-**ALLOW** — No blocking condition was found within the evaluated scope. The proposed action is consistent with user authorization. Downstream execution controls still apply.
+**ALLOW** - No blocking condition was found within the evaluated scope. The proposed action is consistent with user authorization. Downstream execution controls still apply.
 
-**REVIEW** — Automatic progression should be withheld. The proposed action requires clarification or human review before it can proceed.
+**REVIEW** - Automatic progression should be withheld. The proposed action requires clarification or human review before it can proceed.
 
-**BLOCK** — A blocking condition was found. The proposed action should not proceed under the current decision.
+**BLOCK** - A blocking condition was found. The proposed action should not proceed under the current decision.
 
 Every decision is auditable. The public audit record includes the verdict, a reason code, and a per-category assessment. Internal scoring detail is not exposed.
 
@@ -56,13 +56,14 @@ Validation testing covers:
 
 ---
 
-## Evidence status labels
+## Evidence labels
 
-All published artifacts carry one of the following status labels:
+Published artifacts may use the following evidence labels:
 
 | Label | Meaning |
 |---|---|
 | CURRENT_VALIDATION | Evidence from the current frozen benchmark |
+| VALIDATED | Completed evaluation run on the current system; current evidence, but separate from the frozen headline CURRENT_VALIDATION benchmark |
 | HISTORICAL | Evidence from prior test iterations; does not represent the current system |
 | INCIDENT_DERIVED | Test derived from a real-world disclosed security incident |
 | KNOWN_LIMITATION | A documented boundary of current system capability |

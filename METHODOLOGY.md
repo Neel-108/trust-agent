@@ -17,19 +17,21 @@ A benchmark must be frozen before it is run. The sequence is:
 
 A failed case is not removed. A correctly constructed test that Trust Agent fails becomes a documented limitation or a regression target. Silent modification of failed cases after the fact is not permitted. A legitimate fixture error may be corrected only with explicit documentation of what changed and why.
 
+When an older conceptual suite is rerun on the current system, the original cases and expected outcomes are preserved wherever possible. If the current validation schema no longer accepts legacy fixture vocabulary, compatibility-only normalization may be made only when it does not change the intended adversarial scenario, authorization meaning, tool behavior being tested, or expected outcome. The compatibility change must be explicitly documented.
+
 ---
 
 ## Types of test cases
 
 Each test case is classified into one of four categories. This classification is stated in all published suite files and must not be overstated.
 
-**Exact replay** — The published attacker payload or exact action sequence is reproduced without modification. Only used when the source provides sufficient published detail to justify this claim. Never described as exact replay when it is not.
+**Exact replay** - The published attacker payload or exact action sequence is reproduced without modification. Only used when the source provides sufficient published detail to justify this claim. Never described as exact replay when it is not.
 
-**Incident-derived adaptation** — The mechanism of a real incident is preserved, but synthetic placeholders replace real credentials, domains, tokens, and identifiers. The attack class and structural properties are faithful to the source. This is the most common type used in incident folders.
+**Incident-derived adaptation** - The mechanism of a real incident is preserved, but synthetic placeholders replace real credentials, domains, tokens, and identifiers. The attack class and structural properties are faithful to the source. This is the most common type used in incident folders.
 
-**Synthetic projection** — Uses a real incident's threat model as a starting point but adds structure or scenarios not directly described by the source. Always labeled as such.
+**Synthetic projection** - Uses a real incident's threat model as a starting point but adds structure or scenarios not directly described by the source. Always labeled as such.
 
-**Conceptual test** — Built from general threat models, not a specific incident. Used in evaluation folders rather than incident folders.
+**Conceptual test** - Built from general threat models, not a specific incident. Used in evaluation folders rather than incident folders.
 
 ---
 
@@ -49,9 +51,9 @@ Source URLs, researcher names, and publication dates are preserved in incident d
 
 ## Incidents vs evaluations
 
-**[incidents/](incidents/)** contains test suites derived from specific, named real-world security incidents or research disclosures. Each folder documents: the real incident, the source, which part was converted into a test, what adaptations were made, what was expected, what happened, what the result demonstrates, and what it does not demonstrate.
+**[incidents](incidents/)** contains test suites derived from specific, named real-world security incidents or research disclosures. Each folder documents: the real incident, the source, which part was converted into a test, what adaptations were made, what was expected, what happened, what the result demonstrates, and what it does not demonstrate.
 
-**[evaluations/](evaluations/)** contains general adversarial and benign capability tests developed independently of specific incidents. These cover threat categories rather than named incidents.
+**[evaluations](evaluations/)** contains general adversarial and benign capability tests developed independently of specific incidents. These cover threat categories rather than named incidents.
 
 ---
 
@@ -80,7 +82,7 @@ Reserved test domain suffixes and documentation IP ranges are used in place of r
 
 Results published in this repository use the Trust Agent public results format. Each published result includes:
 
-- Verdict per case: PASS, REFINE, or FLAG — with corresponding recommendation ALLOW, REVIEW, or BLOCK
+- Verdict per case: PASS, REFINE, or FLAG - with corresponding recommendation ALLOW, REVIEW, or BLOCK
 - Expected outcome
 - Match or mismatch with expected
 - Public audit record per case, covering: verdict, reason code, per-category assessment, and operational meaning
