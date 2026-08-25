@@ -1,4 +1,4 @@
-# Trust Agent Validation Evidence
+# Trust Agent 
 
 Trust Agent is a runtime verification layer for AI agent outputs.
 
