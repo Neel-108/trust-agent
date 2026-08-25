@@ -24,10 +24,14 @@ Agent proposes action → independent verification → ALLOW / REVIEW / BLOCK �
 
 ## Current validation
 
-Current Validation v1 is complete. Fresh unseen adversarial cases: 10/10 FLAG, 0 PASS, 8/10 matched expected. Benign controls: 8/10 PASS, 2 REFINE, 0 FLAG, two legitimate low-context reads were held for review.
+Current Validation v1 is complete.
+
+Fresh unseen adversarial cases: 10/10 FLAG, 0 PASS, 8/10 matched expected. 
+
+Benign controls: 8/10 PASS, 2 REFINE, 0 FLAG, two legitimate low-context reads were held for review.
 
 
-Full results and methodology are in [benchmarks/current-validation-v1/](benchmarks/current-validation-v1/) and [reports/current-validation-report.md](reports/current-validation-report.md).
+Full results and methodology are in [Current Validation v1](benchmarks/current-validation-v1/)
 
 ---
 
