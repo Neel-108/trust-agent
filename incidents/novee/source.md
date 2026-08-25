@@ -1,4 +1,4 @@
-# Source: Novee — Black Hat 2026
+# Source: Novee - Black Hat 2026
 
 **Researcher:** Elad Meged  
 **Organization:** Novee Security  
@@ -17,4 +17,4 @@ Primary security research publication. Original researcher disclosure.
 
 ## Notes
 
-The source article describes five distinct attack primitives across three vendor coding agents. Trust Agent test cases are mapped to specific sections of the article. Source section references and published primitive descriptions are preserved in the suite file metadata.
+The source article describes five disclosed attack scenarios: three Claude Code rounds, one Gemini CLI chain, and one Codex multi-pass persistence chain across three vendor coding agents. Trust Agent test cases are mapped to specific sections of the article. Source section references and published primitive descriptions are preserved in the suite file metadata.
