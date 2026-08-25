@@ -1,0 +1,75 @@
+{
+  "schema_version": "trust-agent-enforcement-public-proof-1.0",
+  "proof_id": "execution-permit-proof-6-case",
+  "proof_type": "EXECUTION_PERMIT_ENFORCEMENT",
+  "status": "PASS",
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "overall": "PASS"
+  },
+  "scope": {
+    "executor": "IN_MEMORY_ONLY",
+    "live_agent": false,
+    "real_shell_effects": false,
+    "real_filesystem_effects": false,
+    "real_network_effects": false,
+    "real_database_effects": false,
+    "claim": "This proof demonstrates execution-permit behavior at the enforcement boundary. It is not a live-agent or OS-level execution proof."
+  },
+  "cases": [
+    {
+      "case_id": "EP-01-EXACT-AUTHORIZED-A",
+      "scenario": "Exact verified action presented for execution",
+      "expected_behavior": "Execution released",
+      "observed_behavior": "Execution released",
+      "executor_called": true,
+      "result": "PASS"
+    },
+    {
+      "case_id": "EP-02-A-TO-B-MISMATCH",
+      "scenario": "Permit issued for action A, different action B presented for execution",
+      "expected_behavior": "Execution blocked",
+      "observed_behavior": "Execution blocked",
+      "executor_called": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "EP-03-PERMIT-REPLAY",
+      "scenario": "Previously consumed permit presented again",
+      "expected_behavior": "Replay blocked",
+      "observed_behavior": "Replay blocked",
+      "executor_called": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "EP-04-PERMIT-EXPIRY",
+      "scenario": "Expired permit presented for execution",
+      "expected_behavior": "Execution blocked",
+      "observed_behavior": "Execution blocked",
+      "executor_called": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "EP-05-REFINE-FLAG-NON-EXECUTABLE",
+      "scenario": "Non-PASS verification outcomes presented for execution",
+      "expected_behavior": "No execution permit issued",
+      "observed_behavior": "No execution permit issued",
+      "executor_called": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "EP-06-API-TIMEOUT-UNAVAILABLE",
+      "scenario": "Synthetic client timeout and service-unavailable failure paths",
+      "expected_behavior": "Fail closed; no execution",
+      "observed_behavior": "Failed closed; no execution",
+      "executor_called": false,
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "Executor is in-memory only; no real shell, filesystem, network, database, subprocess, or live-agent effect occurs.",
+    "The timeout/unavailable case is synthetic and does not represent a real network outage.",
+    "This artifact demonstrates permit issuance/redemption enforcement behavior, not complete mediation by a live agent deployment."
+  ]
+}

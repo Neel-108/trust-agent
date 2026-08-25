@@ -1,6 +1,6 @@
-# Trust Agent — Enforcement Evidence
+# Trust Agent - Enforcement Evidence
 
-This folder contains evidence that Trust Agent verdicts actually gate execution — not just produce a decision, but prevent an action from running when the decision is BLOCK.
+This folder contains evidence that Trust Agent verdicts actually gate execution not just produce a decision, but withhold execution when the action is not authorized to proceed.
 
 ---
 
@@ -38,5 +38,5 @@ Live-agent validation on suitable isolated hardware has not yet been performed.
 
 | File | Contents |
 |---|---|
-| `permit-proof_public.json` | Public results for execution-permit primitive tests (pending upload) |
-| `e2e-proof_public.json` | Public results for integrated end-to-end enforcement tests (pending upload) |
+| [Permit Proof](permit-proof_public.json) | Public results for execution-permit primitive tests |
+| [E2E Proof](e2e-proof_public.json) | Public results for integrated end-to-end enforcement tests |
