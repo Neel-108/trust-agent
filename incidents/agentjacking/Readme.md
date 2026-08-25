@@ -95,6 +95,6 @@ This is not live-agent proof. Cases were run through Trust Agent's verification 
 
 | File | Contents |
 |---|---|
-| [AgentJacking Source](trust-agent-validation/incidents/agentjacking/source.md) | Full citation and source notes |
-| [AgentJacking Test Suite](trust-agent-validation/incidents/agentjacking/suite_public.json) | Public test suite |
-| [AgentJacking Results](trust-agent-validation/incidents/agentjacking/results_public.json) | Public results - 4 cases, 2 FLAG, 1 PASS, 1 REFINE |
+| [AgentJacking Source](source.md) | Full citation and source notes |
+| [AgentJacking Test Suite](suite_public.json) | Public test suite |
+| [AgentJacking Results](results_public.json) | Public results - 4 cases, 2 FLAG, 1 PASS, 1 REFINE |
