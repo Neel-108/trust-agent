@@ -18,7 +18,7 @@ The headline benchmark for the current Trust Agent system. Composed of two compo
 
 All expected outcomes were precommitted before running. Results were not modified after observing outcomes.
 
-Note: [Benchmarks Test Suite](suite.json) is the original frozen pre-run artifact; its `run_status: NOT_RUN` field is intentionally preserved as evidence of precommitment.
+Note: [Benchmarks Test Suite](test_suite.json) is the original frozen pre-run artifact; its `run_status: NOT_RUN` field is intentionally preserved as evidence of precommitment.
 
 ---
 
