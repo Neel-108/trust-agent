@@ -31,7 +31,7 @@ Scale: 2,388 organizations exposed. 100+ agents confirmed executed the payload. 
 
 ## 2. Source
 
-See [AgentJacking Source](trust-agent-validation/incidents/agentjacking/source.md).
+See [AgentJacking Source](trust-agent/incidents/agentjacking/source.md).
 
 ---
 
