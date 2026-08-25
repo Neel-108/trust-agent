@@ -3,7 +3,7 @@
   "suite_id": "novee-blackhat-2026-full-chain-v2",
   "suite_name": "Novee Black Hat 2026 Full-Chain Trust-Handoff Suite",
   "metadata": {
-    "author": "Sol",
+    "author": "Neel",
     "dataset_status": "INCIDENT_DERIVED_ADVERSARIAL",
     "researcher": "Elad Meged",
     "source_title": "Black Hat 2026: If You Run These Automations, You're Exposed Too: Critical Flaws in Anthropic, Google, and OpenAI's Coding Agents",
