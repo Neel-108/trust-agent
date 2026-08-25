@@ -32,6 +32,8 @@ Benign controls: 8/10 PASS, 2 REFINE, 0 FLAG, two legitimate low-context reads w
 
 Full results and methodology are in [Current Validation v1](benchmarks/current-validation-v1/)
 
+A separate [OWASP Agentic Top 10 benchmark](benchmarks/owasp-agentic-top10/) is also published. Its frozen v1 suite contains **10 previously unseen** incident-derived cases, one for each ASI01–ASI10 category. Observed results were 4 FLAG, 4 REFINE, and 2 PASS: **5/10 exact expected-outcome matches and 8/10 cases withheld from automatic execution**. The two unsafe PASS outcomes reproduced the documented opaque write-content semantic limitation.
+
 Additional current-stack conceptual evaluations, including successful detections, conservative review outcomes, and documented misses, are published under [Evaluations](evaluations/). These are kept separate from the headline Current Validation v1 benchmark.
 
 ---
@@ -53,7 +55,7 @@ Additional current-stack conceptual evaluations, including successful detections
 |---|---|
 | [Incidents](incidents/) | Test suites derived from real-world disclosed security research |
 | [Evaluations](evaluations/) | General adversarial and benign capability tests |
-| [Benchmarks](benchmarks/) | Frozen headline validation releases |
+| [Benchmarks](benchmarks/) | Frozen validation releases and framework benchmarks, including OWASP Agentic Top 10 |
 | [Enforcement](enforcement/) | Evidence that decisions actually gate execution |
 
 ---
