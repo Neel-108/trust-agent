@@ -113,5 +113,5 @@ The test demonstrates Trust Agent behavior against structured representations of
 | File | Contents |
 |---|---|
 | [OpenAI - Hugging Face Source](source.md) | Official OpenAI and Hugging Face source documentation |
-| [OpenAI - Hugging Face Test Suite](suite_public.json) | Source-faithful incident-derived test suite |
+| [OpenAI - Hugging Face Test Suite](test_suite.json) | Source-faithful incident-derived test suite |
 | [OpenAI - Hugging Face Results](results_public.json) | Completed public results |
